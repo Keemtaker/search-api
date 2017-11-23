@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     nodes.each do |node|
 
       @nodes_hash[:reponse] = {}
-      @nodes_hash[:reponse][:current_date] = Time.now
+      @nodes_hash[:reponse][:current_date] = Time.now.strftime("%B, %d, %Y")
       @nodes_hash[:reponse][:letters_count] = node.text.strip.count(letter)
       @nodes_hash[:reponse][:letter] = letter
     end
